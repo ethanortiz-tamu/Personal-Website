@@ -1,11 +1,192 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>About Me</title>
+<title>Ethan Ortiz</title>
+<link rel="stylesheet" type="text/css" href="style.css"></link>
 </head>
-<body>
-<h1>Your Name</h1>
-<p>My about page</p>
-<a href="index.html">Home</a>
+
+<div class ="bg-blue bar text-white fixed_top" style = "height: 5vw">
+    <h1>About Me</h1>
+    <ul>
+        <li class = "bar_item_li">
+            <a class = "bar_item text-white" href="index.html">Home</a>
+        </li >
+        <li class = "bar_item_li">
+            <a class = "bar_item text-white" href="about.html">About</a>
+        </li >
+        <li class = "bar_item_li">
+            <a class = "bar_item text-white" href="portfolio.html">Portfolio</a>
+        </li>
+        <li class = "bar_item_li">
+            <a class = "bar_item text-white" href="service.html">Service</a>
+        </li>
+        <li class = "bar_item_li">
+            <a class = "bar_item text-white" href="ai.html">AI</a>
+        </li>
+        <li class = "bar_item_li">
+            <a class = "bar_item text-white" href="ethan-ortiz-resume.pdf">Resume</a>
+        </li>
+    </ul>
+</div>
+
+<body class = "bg-grey text-white center">
+    
+    <table class = "bar" style = "padding: 2%;">
+        <tr style="margin-top: 3%;">
+            <td class="bg-black text-white" style="padding: 4%;">
+                
+                <h1 style = "padding: 4%;">
+                    Education
+                </h1>
+                <p>
+                    GPA: 3.93
+                </p>
+                <p >
+                    College of Engineering - B.S.  in  Computer Science, Minor in Mathematics 
+                </p>
+                <h1 style = "padding: 4%;">Coursework</h1>
+                <p>
+                    Data Structures and Algorithms, Discrete Structures, Computer Architecture, Programming Languages, Program Design, Computer Systems, Linear Algebra, Differential Equations
+                </p>
+            </td>
+            <td style="width: 2%;">
+
+            </td>
+            <td style="width: 40%;">
+                <img src="pictures/ethan-france.png" alt="Portrait" width="100%" height="auto">
+            </td>
+        </tr>
+    </table>
+    <table class = "bar" style = "padding: 2%; ; padding-top: 0;">
+        <tr>
+            <td style="width: 40%;">
+                <img src="pictures/ethan-hiking.png" alt="Portrait" width="100%" height="auto">
+            </td>
+            <td style="width: 2%;">
+
+            </td>
+            <td class="bg-black text-white" style = "padding: 4%;">
+                
+                <h1 style = "padding: 4%;">Skills</h1>
+                <ul>
+                    <li class = "text-white">
+                        <p>Java, C++, Python</p>
+                    </li>
+                    <li>
+                        <p>HTML, CSS, Javascript</p>
+                    </li>
+                    <li>
+                        <p>C#, SQL, Haskell</p>
+                    </li>
+                    <li>
+                        <p>C, Assembly, XML</p>
+                    </li>
+                    <li>
+                        <p>Linux, Git, Github</p>
+                    </li>
+                    <li>
+                        <p>Azure Cloud Services</p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <table class = "bar" style = "padding: 2%; padding-top: 0;">
+        <tr style="margin-top: 3%;">
+            <td class="bg-black text-white" style="padding: 4%;">
+                
+                <h1 style = "padding: 4%;">Awards</h1>
+                <ul>
+                    <li><p>
+                        Eagle Scout
+                    </p></li>
+                    <li><p>
+                        National Hispanic Scholar
+                    </p></li>
+                    <li><p>
+                        TMEA Allstate
+                    </p></li>
+                    <li><p>
+                        DECA ICDC Finalist
+                    </p></li>
+                    <li><p>
+                        Dean’s List
+                    </p></li>
+                    <li><p>
+                        Employee of the Month - HDC
+                    </p></li>
+                </ul>
+            </td>
+            <td style="width: 2%;">
+
+            </td>
+            <td style="width: 40%;">
+                <img src="pictures/mountain.JPG" alt="Portrait" width="100%" height="auto">
+            </td>
+        </tr>
+    </table>
 </body>
+
+<div class ="bg-black bar center" style = "height: 12vw; ">
+    <div> 
+        <h4>Contact</h4>
+        <p>Email: <a class="bar_item text-white" onclick="copyEmailToClipboard()">ethan@loszitros.com</a></p>
+        <p>Phone: <a class="bar_item text-white" onclick="copyPhoneToClipboard()">(512) 923-3309</a></p>
+    </div>
+    <div> 
+        <p>
+            <a href="https://www.linkedin.com/in/ethan-ortiz-0b3aa5249" title="ethan-ortiz-0b3aa5249">
+            <img src="pictures/linkedin_logo.png" alt="LinkedIn Logo" class = "logo"></a>
+            <a href="https://www.instagram.com/e.as.in.edward/" title="e.as.in.edward">
+            <img src="pictures/instagram_logo.png" alt="Instagram Logo" class = "logo"></a>
+            <a href="https://github.com/ethanortiz25?tab=repositories" title="ethanortiz25">
+            <img src="pictures/github_logo.png" alt="Github Logo" class = "logo"></a>
+        </p>
+    </div>
+</div>
+
+<script>
+    function copyEmailToClipboard() {
+        const emailText = "ethan@loszitros.com";
+        const tempElement = document.createElement('textarea');
+        tempElement.value = emailText;
+        document.body.appendChild(tempElement);
+        tempElement.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempElement);
+        
+        showToast("Copied to clipboard!");
+    }
+    function copyPhoneToClipboard() {
+        const emailText = "5129233309";
+        const tempElement = document.createElement('textarea');
+        tempElement.value = emailText;
+        document.body.appendChild(tempElement);
+        tempElement.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempElement);
+        
+        showToast("Copied to clipboard!");
+    }
+
+    function showToast(message) {
+        const toastElement = document.createElement("div");
+        toastElement.innerText = message;
+        toastElement.style.backgroundColor = "#252525";
+        toastElement.style.color = "#fff";
+        toastElement.style.padding = "10px";
+        toastElement.style.position = "fixed";
+        toastElement.style.bottom = "30px";
+        toastElement.style.left = "50%";
+        toastElement.style.transform = "translateX(-50%)";
+        toastElement.style.borderRadius = "5px";
+        toastElement.style.zIndex = "999";
+        toastElement.style.fontFamily = "Verdana";
+        document.body.appendChild(toastElement);
+
+        setTimeout(function () {
+            document.body.removeChild(toastElement);
+        }, 3000); 
+    }
+</script>
 </html>
